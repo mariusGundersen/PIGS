@@ -2,6 +2,9 @@
 
 This is based on the gifsocket made by Alvaro Videla: [https://github.com/videlalvaro/gifsockets](https://github.com/videlalvaro/gifsockets).
 
+## [DEMO](http://lab.mariusgundersen.com/PIGS/)
+
+
 ## How does it work
 
 Go to index.php, and you will see a progressing animated gif. 
