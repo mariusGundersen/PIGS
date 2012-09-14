@@ -15,10 +15,9 @@ public class Pigs{
 		encoder.start(System.out);
 		encoder.setDelay(noDelay ? 50 : 1);
 		for(int i=0; i<100; i+=(int)(Math.random()*20)){
-			sleep(noDelay ? 0 : 1000);
 			addMessage(encoder, i);
+			sleep(noDelay ? 0 : 1000);
 		}
-		sleep(noDelay ? 0 : 1000);
 		addMessage(encoder, 100);
 		sleep(noDelay ? 0 : 1000);
 		addMessage(encoder, "Done");

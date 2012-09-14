@@ -1,0 +1,37 @@
+<!doctype html>
+
+<script>
+
+function doWorkInGif(event){
+	var img = createPIGS("doHeavyWork.php", event.target, function(img){
+		img.parentNode.parentNode.removeChild(img.parentNode);
+		document.getElementById("output").innerHTML = "Done!";
+	});
+	
+	var submit = document.getElementById("submit");
+	submit.parentNode.appendChild(img);
+	submit.parentNode.removeChild(submit);
+	
+	event.preventDefault();
+	return false;
+}
+function createPIGS(url, params, callback){
+	var img = document.createElement("img");
+	var p = [];
+	for(var i=0; i<params.length; i++){
+		if(params[i].type == "text") p.push(params[i].id+"="+params[i].value);
+	}
+	img.onload = function(){callback(img)};
+	img.src = url+"?"+p.join("&amp;");
+	return img;
+}
+
+</script>
+
+<h1>Start doing some heavy processing on the server</h1>
+<form onsubmit="doWorkInGif(event)">
+	<label>Name of heavy process</label><br>
+	<input id="param" type="text"/><br>
+	<input type="submit" id="submit" />
+</form>
+<span id="output"></span>
