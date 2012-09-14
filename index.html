@@ -29,6 +29,10 @@ function createPIGS(url, params, callback){
 </script>
 
 <h1>Start doing some heavy processing on the server</h1>
+<p>The data entered below is sent to the server as GET params when loading the image.<br>
+As work is done on the server, the image will update showing the progress of the work.<br>
+Once the work is done the image will be done loading and a callback method is run on the client<br>
+<a href="https://github.com/mariusGundersen/PIGS">Source Code</a>, made with <a href="https://github.com/videlalvaro/gifsockets">Gifsockets</a></p>
 <form onsubmit="doWorkInGif(event)">
 	<label>Name of heavy process</label><br>
 	<input id="param" type="text"/><br>
