@@ -14,9 +14,9 @@ public class Pigs{
 		//encoder.setTransparent(TRANSPARENT);
 		encoder.start(System.out);
 		encoder.setDelay(noDelay ? 50 : 1);
-		for(int i=0; i<100; i+=(int)(Math.random()*20)){
+		for(int i=0; i<100; i+=(int)(Math.random()*5)){
 			addMessage(encoder, i);
-			sleep(noDelay ? 0 : 1000);
+			sleep(noDelay ? 0 : 100);
 		}
 		addMessage(encoder, 100);
 		sleep(noDelay ? 0 : 1000);
